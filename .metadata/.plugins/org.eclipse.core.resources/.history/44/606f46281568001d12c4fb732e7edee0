@@ -1,0 +1,19 @@
+package com.jspider.jdbcMain;
+
+public class CreateTable {
+	
+	
+	public static void createTable() {
+		
+		while(true) {
+			
+		}
+		System.out.println("enter the table name");
+		String tableName = DatabaseProperties.scanner.next();
+		String firstColumn = DatabaseProperties.scanner.next();
+		String columnDatatype = DatabaseProperties.scanner.next();
+		String columnConstraint = DatabaseProperties.scanner.next();
+		
+		
+	}
+}

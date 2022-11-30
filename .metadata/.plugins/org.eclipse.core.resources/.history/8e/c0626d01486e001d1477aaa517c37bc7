@@ -1,0 +1,5 @@
+package com.jspider.hibernatemanytoone.dto;
+
+public class EmployeeDTO {
+
+}

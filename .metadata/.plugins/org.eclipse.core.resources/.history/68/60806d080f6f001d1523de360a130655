@@ -1,0 +1,53 @@
+package com.jspider.MusicaPlayer_hibernate.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import com.jspider.MusicaPlayer_hibernate.dto.MusicPlayerDTO;
+
+public class MusicPlayerDAO {
+	
+	private static EntityManagerFactory factory;
+	private static EntityManager manager;
+	private static EntityTransaction transaction;
+	
+	private static void openConnection() {
+		factory = Persistence.createEntityManagerFactory("musicplayer");
+		manager = factory.createEntityManager();
+		transaction = manager.getTransaction();
+	}
+	private static void closeConnection() {
+		if(factory!=null) {
+			factory.close();
+		}
+		if(manager!=null) {
+			manager.close();
+		}
+		if(transaction!=null) {
+			try {
+				transaction.rollback();				
+			} catch (Exception e) {
+				System.out.println("transaction is committed..");
+				//e.printStackTrace();
+			}
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			openConnection();
+			transaction.begin();
+			
+			boolean loop
+			while(loop)
+			
+						
+		} finally {
+			closeConnection();
+		}
+	}
+	public static void addSong() {
+		MusicPlayerDTO music = new MusicPlayerDTO();
+	}
+}

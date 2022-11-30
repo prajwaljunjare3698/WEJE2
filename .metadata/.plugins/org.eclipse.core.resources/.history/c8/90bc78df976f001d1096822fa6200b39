@@ -1,0 +1,12 @@
+package com.jspider.MusicaPlayer_hibernate.operations;
+
+import com.jspider.MusicaPlayer_hibernate.dto.MusicPlayerDTO;
+
+public class UpdateSong {
+
+	public static void updateSong() {
+
+		MusicPlayerDTO music = new
+	}
+
+}

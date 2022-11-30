@@ -1,0 +1,6 @@
+package com.jspider.hibernatemanytoone.dto;
+
+public class CompanyDTO {
+
+	int id
+}

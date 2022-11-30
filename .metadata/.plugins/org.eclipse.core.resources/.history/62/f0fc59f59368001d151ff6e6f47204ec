@@ -1,0 +1,32 @@
+package com.jspider.jdbcMain;
+
+public class InsertRecord {
+	
+	public static void insertData() {
+		System.out.println("select table to insert records");
+		
+		String query = "show tables";		
+		DatabaseProperties.establishConnection(query,1);
+		
+		System.out.println("enter table name to insert records");		
+		String tableName = DatabaseProperties.scanner.next();	
+		
+		System.out.println(tableName+" table properties are");
+		
+		System.out.println("how many record you want to insert into "+tableName);
+		int count = DatabaseProperties.scanner.nextInt();	
+		
+		for(int i=1;i<=count;i++) {
+			System.out.println("enter properties");
+			query = "insert into "+tableName+" values("
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+}

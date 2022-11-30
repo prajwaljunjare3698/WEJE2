@@ -1,0 +1,16 @@
+package com.jspider.hibernateonetoone.dto;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class HusbandDTO {
+	private int id;
+	private String name;
+	private String email;
+	private int age;
+	private long contact;
+	
+}

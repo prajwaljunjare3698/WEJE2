@@ -1,0 +1,8 @@
+package com.jspider.hibernateonetoone.dto;
+
+public class HusbandDTO {
+	private int id;
+	private String name;
+	private String email
+	private 
+}

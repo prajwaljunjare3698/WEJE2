@@ -1,0 +1,9 @@
+package com.jspider.MusicaPlayer_hibernate.operations.dao;
+
+public class SongTable {
+
+	public static void songTable() {
+		
+		
+	}
+}

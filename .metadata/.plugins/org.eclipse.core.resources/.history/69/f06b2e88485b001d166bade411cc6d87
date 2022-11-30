@@ -1,0 +1,8 @@
+package com.jspider.main;
+
+import com.jspider.song.Song;
+
+public class MusicPlayer {
+	static Song song;
+	
+}

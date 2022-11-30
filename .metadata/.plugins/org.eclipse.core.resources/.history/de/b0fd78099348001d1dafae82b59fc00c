@@ -1,0 +1,17 @@
+package Design_Patterns;
+
+interface plan_rate{
+	public void rate();
+}
+class VI implements plan_rate{
+	public void rate() {
+		double rate = 
+	}
+}
+public class FactoryDesign {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

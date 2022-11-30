@@ -1,0 +1,5 @@
+package com.jspider.MusicaPlayer_hibernate.operations;
+
+public class PlayAllSong {
+
+}

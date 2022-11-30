@@ -1,0 +1,21 @@
+package com.jspider.MusicaPlayer_hibernate.operations;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+
+public class RequiredResources {
+
+	
+	protected static ArrayList<Integer> list = new ArrayList<Integer>();
+		
+	protected static EntityManagerFactory factory;
+	protected static EntityManager manager;
+	protected static EntityTransaction transaction;	
+	protected static Scanner scanner = new Scanner(System.in);
+	
+	
+}

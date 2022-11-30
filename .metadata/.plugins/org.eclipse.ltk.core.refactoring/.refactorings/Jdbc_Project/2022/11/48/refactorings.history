@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;resources&apos; to &apos;MusicPlayer_jdbc&apos;&#x0D;&#x0A;- Original project: &apos;Jdbc_Project&apos;&#x0D;&#x0A;- Destination element: &apos;MusicPlayer_jdbc&apos;&#x0D;&#x0A;- Original element: &apos;resources&apos;" description="Copy folder" element1="resources" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1668940736811" target="/MusicPlayer_jdbc" units="0" version="1.0"/>
+</session>

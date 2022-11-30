@@ -1,0 +1,14 @@
+package Design_Patterns;
+class Test{
+	static Test obj = new Test();
+	private Test() {
+		
+	}
+	public static Test getObject() {
+		return obj;
+	}
+	
+}
+public class Singleton {
+
+}

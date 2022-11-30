@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Jdbc2&apos; to &apos;Jdbc_properties&apos;" description="Rename resource &apos;Jdbc2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Jdbc2" name="Jdbc_properties" stamp="1668670039274" updateReferences="true"/>
+</session>

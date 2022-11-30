@@ -1,0 +1,8 @@
+package mysql;
+
+public class Retrive_data {
+private void mian() {
+	// TODO Auto-generated method stub
+
+}
+}

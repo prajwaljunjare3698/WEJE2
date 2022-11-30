@@ -1,0 +1,6 @@
+package com.jspider.hibernatemanytomany.dto;
+
+public class ProductDTO {
+	
+	
+}

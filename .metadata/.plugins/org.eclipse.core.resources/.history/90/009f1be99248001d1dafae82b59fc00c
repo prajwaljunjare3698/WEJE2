@@ -1,0 +1,13 @@
+package Design_Patterns;
+
+interface plan_rate{
+	public void rate()
+}
+
+public class FactoryDesign {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

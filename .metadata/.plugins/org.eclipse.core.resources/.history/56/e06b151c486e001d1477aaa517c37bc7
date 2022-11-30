@@ -1,0 +1,14 @@
+package com.jspider.hibernatemanytoone.dto;
+
+import javax.persistence.Entity;
+
+@Entity
+
+public class EmployeeDTO {
+
+	private int id;
+	
+	private String name;
+	
+	private String email;
+}

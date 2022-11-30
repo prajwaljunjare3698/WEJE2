@@ -1,0 +1,11 @@
+package com.jspider.hibernate.hibernateonetomany.dto;
+
+import javax.persistence.Entity;
+
+import lombok.Data;
+
+@Entity
+@Data
+public class FatherDTO {
+
+}

@@ -1,0 +1,8 @@
+package com.jspider.hibernateonetoone.dto;
+
+import javax.persistence.Entity;
+
+@Entity
+public class WifeDTO {
+
+}

@@ -1,0 +1,23 @@
+package Design_Patterns;
+
+interface plan_rate{
+	double rate;
+	public void rate();
+}
+class VI implements plan_rate{
+	public void rate() {
+		double rate = 1.2;
+	}
+}
+class Jio implements plan_rate{
+	public void rate() {
+		double rate = 3.5;
+	}
+}
+public class FactoryDesign {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

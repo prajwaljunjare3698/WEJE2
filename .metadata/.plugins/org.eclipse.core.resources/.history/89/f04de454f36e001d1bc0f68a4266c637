@@ -1,0 +1,7 @@
+package com.jspider.MusicaPlayer_hibernate.dto;
+
+public class MusicPlayerDTO {
+	
+	private int id;
+	
+}

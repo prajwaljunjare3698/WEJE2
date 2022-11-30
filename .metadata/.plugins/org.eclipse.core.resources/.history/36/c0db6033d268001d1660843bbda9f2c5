@@ -1,0 +1,286 @@
+package com.jspider.song.operations;
+import java.io.FileReader;
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.Properties;
+import java.util.Scanner;
+
+public class SongOperation {
+	 
+	static SongOperation songOperation = new SongOperation() ;
+	
+	public static Connection connection;
+	public static Statement statement;
+	public static PreparedStatement preparedStatement;
+	public static ResultSet resultSet;
+	public static CallableStatement callableStatement;
+	public static FileReader fileReader;
+	public static Properties properties = new Properties();
+	public static String filePath = "C:\\Users\\kisho\\eclipse-workspace\\MusicPlayer_jdbc\\resources\\db_info.properties";
+	public static int result;
+	public static String query;
+	public static Scanner scanner = new Scanner(System.in);
+	
+	public static int count=0;
+
+	public void addSongs() {
+		System.out.println("how many songs u want to add");
+		int no = scanner.nextInt();
+		for (int i = 0; i < no; i++) {
+			
+			count++;
+			try {
+								
+				fileReader = new FileReader(filePath);
+				properties.load(fileReader);
+				Class.forName(properties.getProperty("driverPath"));
+				
+				connection = DriverManager.getConnection(properties.getProperty("db_url"),properties);
+				statement = connection.createStatement();
+				
+				System.out.println("Enter song id:");			
+				int id = scanner.nextInt();
+				
+				System.out.println("Enter song name:");			
+				String songName = scanner.next();
+				
+				System.out.println("Enter song name:");			
+				String singerName = scanner.next();
+				
+				System.out.println("Enter song name:");			
+				double songLength = scanner.nextDouble();
+				
+				query = "insert into musicplayer values(?,?,?,?)";
+				preparedStatement = connection.prepareStatement(query);
+				
+				preparedStatement.setInt(1, id);
+				preparedStatement.setString(2, songName);
+				preparedStatement.setString(3, singerName);
+				preparedStatement.setDouble(4, songLength);
+								
+				result = preparedStatement.executeUpdate();
+				
+				System.out.println("song added successfully");
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	public void displayListOfSong() {
+		
+		try {
+			fileReader = new FileReader(filePath);
+			properties.load(fileReader);
+			Class.forName(properties.getProperty("driverPath"));
+			
+			connection = DriverManager.getConnection(properties.getProperty("db_url"),properties);
+			statement = connection.createStatement();
+			
+			query = "select * from musicplayer";
+			
+			resultSet = statement.executeQuery(query);
+			while(resultSet.next()) {
+				System.out.println(resultSet.getInt(1)+" "+resultSet.getString(2));
+			}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	public void removeSong() {
+		
+		try {
+			songOperation.displayListOfSong();
+			
+			System.out.println("enter id to delete song");
+			int id = scanner.nextInt();
+			query = "delete from musicplayer where id="+id;
+			
+			statement = connection.createStatement();
+			result = statement.executeUpdate(query);
+			
+			System.out.println("song deleted");
+			
+			count--;
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void ChooseSongPlay() {
+		try {
+			songOperation.displayListOfSong();
+			
+			fileReader = new FileReader(filePath);
+			properties.load(fileReader);
+			Class.forName(properties.getProperty("driverPath"));			
+			connection = DriverManager.getConnection(properties.getProperty("db_url"),properties);
+			statement = connection.createStatement();
+			
+			System.out.println("enter id to play song");
+			
+			int id = scanner.nextInt();
+			
+			if(count==0) {
+				System.out.println("song list is empty add songs");
+				songOperation.addSongs();
+			}
+			else{(id<=count) {
+				
+			}
+				query = "select name from musicplayer where id="+id+"";
+				resultSet = statement.executeQuery(query);		
+				System.out.println(resultSet.getString(2)+" song playing");
+			}
+			else {
+				System.out.println("enter proper id");
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+		
+		
+	public void PlayAllSong() {
+		
+		try {
+			fileReader = new FileReader(filePath);
+			properties.load(fileReader);
+			Class.forName(properties.getProperty("driverPath"));
+			
+			connection = DriverManager.getConnection(properties.getProperty("db_url"),properties);
+			statement = connection.createStatement();
+			
+			query = "select * from musicplayer";
+			
+			resultSet = statement.executeQuery(query);
+			while(resultSet.next()) {
+				System.out.println(resultSet.getString(2)+" is playing");
+			}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	public void PlayRandom() {
+		
+		
+		try {
+			fileReader = new FileReader(filePath);
+			properties.load(fileReader);
+			Class.forName(properties.getProperty("driverPath"));
+			
+			connection = DriverManager.getConnection(properties.getProperty("db_url"),properties);
+			statement = connection.createStatement();
+			
+			//Math.random() * (max - min + 1) + min  
+			double a = (Math.random() * (count - 1 + 1)) + 1;
+			query = "select name from musicplayer where id="+(int)a;
+
+			resultSet = statement.executeQuery(query);
+			while(resultSet.next()) {
+				System.out.println(resultSet.getString(2)+" is playing");
+			}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+	public void update() {
+		
+		try {
+			fileReader = new FileReader(filePath);
+			properties.load(fileReader);
+			Class.forName(properties.getProperty("driverPath"));
+			
+			connection = DriverManager.getConnection(properties.getProperty("db_url"),properties);
+			statement = connection.createStatement();
+			
+			//display all song
+			songOperation.displayListOfSong();
+			
+			System.out.println("select id of song to update");
+			int id = scanner.nextInt();
+						
+			System.out.println("update 1.name\n2.singer\n3.length\n");	
+			int upd = scanner.nextInt();
+			
+			if(upd<=3) {
+				switch (upd) {
+					case 1:
+						System.out.println("enter new songName");
+						String songName = scanner.next();
+						query = "update musicplayer set name=? where id="+id+"";
+						result = statement.executeUpdate(query);
+						
+						System.out.println("song update successfully...");
+						break;
+						
+					case 2:
+						System.out.println("enter new singer");
+						String singerName = scanner.next();
+						query = "update musicplayer set singer=? where id="+id+"";
+						result = statement.executeUpdate(query);
+						
+						System.out.println("song update successfully...");
+						break;
+						
+					case 3:
+						System.out.println("enter updated songName");
+						String songLength = scanner.next();
+						query = "update musicplayer set length=? where id="+id+"";
+						result = statement.executeUpdate(query);
+						
+						System.out.println("song update successfully...");
+						
+						break;
+	
+					default:
+						System.out.println("invalid input");
+						songOperation.update();
+						break;
+				}
+				
+			}
+			else {
+				System.out.println("invlid input");
+				songOperation.update();
+			}
+		
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+}
+	
+	
+	public static void main(String[] args) {
+		try {
+			if(connection!=null || statement!=null || fileReader!=null || preparedStatement!=null || resultSet!=null) {
+				
+				connection.close();
+				statement.close();
+				preparedStatement.close();
+				resultSet.clearWarnings();
+				fileReader.close();
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

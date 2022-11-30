@@ -1,0 +1,15 @@
+package com.jspider.jdbcMain;
+
+import java.sql.Connection;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class CreateTable {
+	
+	
+	public static void createTable() {
+		System.out.println("enter the table name");
+		String tableName = scanner.next();
+		
+	}
+}

@@ -1,0 +1,13 @@
+package Design_Patterns;
+
+class VI{
+	
+}
+
+public class FactoryDesign {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

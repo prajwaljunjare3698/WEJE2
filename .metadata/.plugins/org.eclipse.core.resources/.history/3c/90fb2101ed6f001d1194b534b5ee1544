@@ -1,0 +1,64 @@
+package com.jspider.hibernate.dao;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.hibernate.TransactionException;
+
+import com.jspider.hibernate.dto.StudentDTO;
+
+public class RetrieveData {
+		private static EntityManagerFactory factory;
+		private static EntityManager manager;
+		private static EntityTransaction transaction;
+		
+		private static void openConnection() {
+			factory = Persistence.createEntityManagerFactory("Student");
+			manager = factory.createEntityManager();
+			transaction = manager.getTransaction();
+		}
+		private static void closeConnection() {
+			if(factory!=null) {
+				factory.close();
+			}
+			if(manager!=null) {
+				manager.close();
+			}
+			try {
+				transaction.rollback();
+			} catch (TransactionException e) {
+				//e.printStackTrace();
+				System.out.println("transaction committed...");
+			}
+		}
+		public static void main(String[] args) {
+			try {
+				openConnection();
+				transaction.begin();
+				
+//				StudentDTO st = manager.find(StudentDTO.class, 2);
+//				System.out.println(st.getId()+" "+st.getName());
+//				transaction.commit();
+				
+				Map<String, Object> student = manager.getProperties();
+				
+				Set<String> st = student.keySet();
+								 
+		        // for-each loop
+		        for(String key : st) {
+		            System.out.println("Org : "  + key + "\t\t"
+		                    + "CEO : "  + student.get(key));
+		        }
+									
+			} finally {
+				closeConnection();
+			}
+		}
+}

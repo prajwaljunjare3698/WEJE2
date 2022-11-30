@@ -1,0 +1,5 @@
+package com.jspider.hibernateonetoone.dto;
+
+public class WifeDTO {
+
+}

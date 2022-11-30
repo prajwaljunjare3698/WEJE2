@@ -1,0 +1,27 @@
+package java_8;
+public class copy_constructor {
+    String name;
+    int age;
+    copy_constructor(){
+        this.name = "math";
+        this.age = 23;
+        System.out.println(name+" "+age);
+    }
+    //creating copy constructor
+    Test(Test obj){
+        name = obj.name;
+        age = obj.age;
+        System.out.println(name+" "+age);
+    }
+    
+    public static void main(String args[]){
+        Test t1 = new Test();
+        //passing obj reg to new obj
+        Test t3 = new Test(t1);
+        
+        //also one way to give another obj values
+        Test t2 = t1;
+        System.out.println(t2.name+" "+t2.age);
+        
+    }
+}

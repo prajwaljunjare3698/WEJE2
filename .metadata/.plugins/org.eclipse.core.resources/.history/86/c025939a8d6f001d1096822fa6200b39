@@ -1,0 +1,57 @@
+package com.jspider.MusicaPlayer_hibernate.operations;
+
+import java.util.Iterator;
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+public class SongTable {
+
+	protected static void songTable() {
+		
+//		Query query = session.createQuery("from musicplayerdto"); //You will get Weayher object
+//		List<MusicPlayerDTO> list = query.asList(); //You are accessing as list<WeatherModel>
+		
+		//MusicPlayerDTO music = RequiredResources.manager.find(MusicPlayerDTO.class, 2);
+		
+//		Session session = sessionFactory.openSession();
+//        try {
+//            List<Book> bookList = session.createNativeQuery("Select * from book", Book.class).getResultList();
+//            return bookList;
+//        }catch (Exception e){
+//            return ;
+//        }finally {
+//            session.close();
+//        }
+		
+		SessionFactory factory = cfg.buildSessionFactory();
+	    Session session = factory.openSession();
+
+	    /* Selecting all objects(records) start_______________________ */
+
+
+
+	    Query qry = session.createQuery("from Product Musicplayerdto");
+
+	    List l =qry.list();
+	    System.out.println("Total Number Of Records : "+l.size());
+	    Iterator it = l.iterator();
+
+	    while(it.hasNext())
+	    {
+	        Object o = (Object)it.next();
+	        Product p = (Product)o;
+	        System.out.println("Product id : "+p.getProductId());
+	        System.out.println("Product Name : "+p.getProName());
+	        System.out.println("Product Price : "+p.getPrice());
+	        System.out.println("----------------------");
+	    }       
+
+	    session.close();
+	    factory.close();
+	}
+
+}

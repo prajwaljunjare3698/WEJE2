@@ -1,0 +1,37 @@
+package multi_threading;
+
+class video extends Thread{
+	public void run() {
+		System.out.println("video is showing");
+	}
+}
+class music extends Thread{
+	public void run() {
+		System.out.println("music is playing");
+	}
+}
+class subtitle extends Thread{
+	public void run() {
+		System.out.println("display subtitle");
+	}
+}
+class timer extends Thread{
+	public void run() {
+		System.out.println("timer is onging");
+	}
+}
+public class vlc_task{
+	public static void main(String[] args) {
+		video thread1 = new video();
+		thread1.start();
+		
+		music thread2 = new music();
+		thread2.start();
+		
+		subtitle thread3 = new subtitle();
+		thread3.start();
+		
+		timer thread4 = new timer();
+		thread4.start();
+	}
+}

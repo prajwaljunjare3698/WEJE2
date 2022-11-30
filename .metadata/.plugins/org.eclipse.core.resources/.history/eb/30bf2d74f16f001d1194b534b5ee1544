@@ -1,0 +1,28 @@
+package com.jspider.hibernate.dao;
+
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.jspider.hibernate.dto.StudentDTO;
+
+public class RetriveRecords {
+	
+	
+	public static void retrieve() {
+	Configuration config = new Configuration();
+	  config.addAnnotatedClass(StudentDTO.class);
+	  SessionFactory factory= config.configure().buildSessionFactory();
+	  Session session = factory.getCurrentSession();
+	  session.beginTransaction();
+	  Query queryResult = session.createQuery("from User");
+	  java.util.List allUsers;
+	  allUsers = queryResult.list();
+	  for (int i = 0; i < allUsers.size(); i++) {
+		  StudentDTO user = (User) allUsers.get(i);
+	  }
+	 System.out.println("Database contents delivered..."); 
+	 }
+}

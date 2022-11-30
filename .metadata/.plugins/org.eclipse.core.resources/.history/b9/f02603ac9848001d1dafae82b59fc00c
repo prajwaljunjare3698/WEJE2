@@ -1,0 +1,11 @@
+package Design_Patterns;
+class Test{
+	static Test obj = new Test();
+	private Test() {
+		
+	}
+	
+}
+public class Singleton {
+
+}

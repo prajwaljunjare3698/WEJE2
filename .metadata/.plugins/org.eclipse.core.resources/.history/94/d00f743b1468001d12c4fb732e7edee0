@@ -1,0 +1,20 @@
+package com.jspider.jdbcMain;
+
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.Statement;
+import java.util.Scanner;
+
+public class DatabaseProperties {
+	public static Connection connection;
+	public static Statement statement;
+	public static PreparedStatement preparedStatement;
+	public static CallableStatement callableStatement;
+	public static int result;
+	public static String query;
+	public static Scanner scanner;
+}
+
+
+

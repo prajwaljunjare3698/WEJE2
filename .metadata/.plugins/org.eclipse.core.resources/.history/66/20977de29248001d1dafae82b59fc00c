@@ -1,0 +1,11 @@
+package Design_Patterns;
+
+interface pal
+
+public class FactoryDesign {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

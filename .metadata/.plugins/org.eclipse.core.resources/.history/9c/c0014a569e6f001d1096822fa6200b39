@@ -1,0 +1,54 @@
+package com.jspider.hibernatemanytomany.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+
+import org.hibernate.TransactionException;
+
+import com.jspider.hibernatemanytomany.dto.CustomerDTO;
+
+public class CustomerProductDAO {
+	private static EntityManagerFactory factory;
+	private static EntityManager manager;
+	private static EntityTransaction transaction;
+	
+	private static void openConnection() {
+		factory = Persistence.createEntityManagerFactory("ManyToMany");
+		manager = factory.createEntityManager();
+		transaction = manager.getTransaction();
+	}
+	
+	private static void closeConnection() {
+		if(factory!=null && manager!=null) {
+			factory.close();
+			manager.clear();
+		}
+		if(transaction!=null) {
+			try {
+				transaction.rollback();
+			} catch (TransactionException e) {
+				System.out.println("transaction committed...");
+			}
+		}
+	}
+	public static void main(String[] args) {
+		try {
+			openConnection();
+			transaction.begin();
+			
+			CustomerDTO customer1= new CustomerDTO();
+			customer1.setId(1);
+			customer1.setName("bhide");
+			customer1.setContact(1234);
+			customer1.setEmail("bhide@madhvi.com");
+			
+			
+			
+			
+		} finally {
+			closeConnection();
+		}
+	} 
+}

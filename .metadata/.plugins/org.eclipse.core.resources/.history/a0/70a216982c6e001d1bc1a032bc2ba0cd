@@ -1,0 +1,10 @@
+package com.jspider.hibernate.dto;
+
+public class StudentDAO {
+	
+	private int id;
+	
+	private String name;
+	
+	privagte Stirng email;
+}

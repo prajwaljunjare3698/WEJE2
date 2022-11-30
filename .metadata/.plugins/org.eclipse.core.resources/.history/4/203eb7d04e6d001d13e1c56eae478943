@@ -1,0 +1,5 @@
+package com.jspider.hibernate.hibernateonetomany.dto;
+@
+public class FatherDTO {
+
+}

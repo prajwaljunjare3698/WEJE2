@@ -1,0 +1,17 @@
+package Design_Patterns;
+class Test{
+	static Test obj = new Test();
+	private Test() {
+		
+	}
+	public static Test getObject() {
+		return obj;
+	}
+	
+}
+public class Singleton {
+	public static void main(String[] args) {
+		Test t1 = new Test();
+		System.out.println(t1);
+	}
+}

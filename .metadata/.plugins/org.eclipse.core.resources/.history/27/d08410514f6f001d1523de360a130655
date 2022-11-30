@@ -1,0 +1,22 @@
+package com.jspider.MusicaPlayer_hibernate.operations;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+
+import com.jspider.MusicaPlayer_hibernate.dto.MusicPlayerDTO;
+
+public class SongTable {
+
+	protected static void songTable() {
+		Session session ;
+//		Query query = session.createQuery("from musicplayerdto"); //You will get Weayher object
+//		List<MusicPlayerDTO> list = query.asList(); //You are accessing as list<WeatherModel>
+		
+		
+		
+	}
+
+}

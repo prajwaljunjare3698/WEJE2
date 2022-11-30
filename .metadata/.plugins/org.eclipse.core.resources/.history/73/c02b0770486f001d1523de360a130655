@@ -1,0 +1,16 @@
+package com.jspider.MusicaPlayer_hibernate.operations;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class RequriedResources {
+
+	
+	public static ArrayList<Integer> list = new ArrayList<Integer>();
+		
+	public static ;
+	
+	public static Scanner scanner = new Scanner(System.in);
+	
+	
+}

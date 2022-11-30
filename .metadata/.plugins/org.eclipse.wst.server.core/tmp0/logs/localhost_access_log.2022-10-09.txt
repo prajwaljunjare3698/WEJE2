@@ -1,0 +1,7 @@
+127.0.0.1 - - [09/Oct/2022:09:48:49 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [09/Oct/2022:09:49:24 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [09/Oct/2022:09:49:25 +0530] "GET /Java_8/WEB-INF/classes/functional_interface/comparator.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [09/Oct/2022:09:49:25 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [09/Oct/2022:21:53:40 +0530] "GET / HTTP/1.1" 404 751
+127.0.0.1 - - [09/Oct/2022:21:53:42 +0530] "GET /Java_8/WEB-INF/classes/functional_interface/callble_intrfce.java HTTP/1.1" 404 682
+127.0.0.1 - - [09/Oct/2022:21:53:42 +0530] "GET /favicon.ico HTTP/1.1" 404 762

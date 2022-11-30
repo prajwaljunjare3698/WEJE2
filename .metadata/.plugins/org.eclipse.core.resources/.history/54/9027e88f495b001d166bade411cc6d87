@@ -1,0 +1,31 @@
+package com.jspider.main;
+
+import java.util.Scanner;
+import com.jspider.song.Song;
+
+public class MusicPlayer {
+	static Song song;
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("select\n 1.Add/remove song\n 2.Play song\n 3.Edit song\n 4.Exit");
+		int choose = scanner.nextInt();
+		switch (choose) {
+			case 1:
+				System.out.println("1.add song 2.remove song\n 3.back");
+				int select = scanner.nextInt();
+				switch (select) {
+					case 1:
+						song.addSong();
+						break;
+
+				default:
+					break;
+				}
+				break;
+
+		default:
+			System.out.println("invalid input");
+			break;
+		}
+	}
+}

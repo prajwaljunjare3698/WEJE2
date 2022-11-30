@@ -1,0 +1,11 @@
+package com.jspider.hibernatemanytoone.dto;
+
+public class CompanyDTO {
+
+	private int id;
+	
+	private String name;
+	
+	privat String city;
+	
+}

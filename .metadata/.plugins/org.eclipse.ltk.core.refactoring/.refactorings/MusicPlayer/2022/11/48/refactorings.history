@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 4 packages to &apos;MusicPlayer_jdbc/src&apos;&#x0D;&#x0A;- Original project: &apos;MusicPlayer&apos;&#x0D;&#x0A;- Destination element: &apos;MusicPlayer_jdbc/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     MusicPlayer/src/com.jspider.main&#x0D;&#x0A;     MusicPlayer/src/com.jspider.song&#x0D;&#x0A;     MusicPlayer/src/com.jspider.song.operations&#x0D;&#x0A;     MusicPlayer/src/com.jspider.song.musicplayer_project" description="Copy packages" destination="=MusicPlayer_jdbc/src" element1="/src&lt;com.jspider.main" element2="/src&lt;com.jspider.song" element3="/src&lt;com.jspider.song.operations" element4="/src&lt;com.jspider.song.musicplayer_project" flags="589830" fragments="4" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1668940378154" version="1.0"/>
+</session>
