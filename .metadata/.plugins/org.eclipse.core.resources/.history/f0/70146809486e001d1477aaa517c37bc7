@@ -1,9 +1,0 @@
-package com.jspider.hibernatemanytoone.dto;
-
-public class EmployeeDTO {
-
-	private int id;
-	
-	private Sting name;
-	
-}

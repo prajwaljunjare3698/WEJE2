@@ -71,7 +71,7 @@ public class SongOperation {
 	public void ChooseSongPlay() {
 		if(music.size()!=0) {
 			displayListOfSong();
-			Song song = new Song();
+			//Song song = new Song();
 			System.out.println("enter song id");
 			int id = sc.nextInt();
 			if(id<=music.size()) {

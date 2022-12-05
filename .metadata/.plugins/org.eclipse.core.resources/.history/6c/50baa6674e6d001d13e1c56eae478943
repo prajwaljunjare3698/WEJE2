@@ -1,7 +1,0 @@
-package com.jspider.hibernate.hibernateonetomany.dto;
-@en
-public class ChildDTO {
-	private int id;
-	private String name;
-	
-}

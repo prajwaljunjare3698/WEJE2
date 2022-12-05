@@ -81,7 +81,8 @@ public class MusicPlayer {
 		default : {
 			System.out.println("invalid input");			
 		}
-		}	
+		}
+		sc.close();
 	}
 }
 

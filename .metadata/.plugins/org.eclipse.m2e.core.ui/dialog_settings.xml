@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\kisho\eclipse-workspace\onetooneBidrectional\src\main\java\com\jspider\hibernate\onetooneBidirectional\dao\QuestionAnswerDAO.java"/>
 			<item value="C:\Users\kisho\eclipse-workspace\hibernatemanytoone\src\main\java\com\jspider\hibernatemanytoone\dao\CompanyEmplyoeeDAO.java"/>
 			<item value="C:\Users\kisho\eclipse-workspace"/>
 			<item value="C:\Users\kisho\eclipse-workspace\designpattern"/>
@@ -31,10 +32,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="com.jspider.hibernatemaping_task"/>
 		</list>
 		<list key="groupId">
+			<item value="com.jspider"/>
 		</list>
 		<list key="artifactId">
+			<item value="hibernatemaping_task"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

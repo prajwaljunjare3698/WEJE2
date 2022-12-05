@@ -1,5 +1,0 @@
-package com.jspider.MusicaPlayer_hibernate.dao;
-
-public class RemoveSong {
-
-}

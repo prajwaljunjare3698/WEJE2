@@ -2,35 +2,69 @@ package com.jspider.hibernate.dao;
 
 import java.util.List;
 
-import org.hibernate.Query;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import org.hibernate.TransactionException;
 
 import com.jspider.hibernate.dto.StudentDTO;
 
 public class RetriveRecords {
+	private static EntityManagerFactory factory;
+	private static EntityManager manager;
+	private static EntityTransaction transaction;
+	private static String query;
+	
+	private static void openConnection() {
 		
-	public static void retrieve() {	
-//	   Configuration config = new Configuration();
-//	   config.addAnnotatedClass(StudentDTO.class);
-//	   SessionFactory factory= config.configure().buildSessionFactory();
-//	   Session session = factory.getCurrentSession();
-//	   session.beginTransaction();
-//	   Query queryResult = session.createQuery("from StudentDTO");
-//	  
-//	   List allUsers = queryResult.list();
-//	   for (int i = 0; i < allUsers.size(); i++) {
-//		   
-//		   StudentDTO student = (StudentDTO) allUsers.get(i);
-//	   }
-//		  System.out.println("Database contents delivered..."); 
-		
-//		@joinnTable(name="tablenamefor_intermediate tble",
-//				joinColumns=@JoinColumn(referenceColumnNmae="curently_talbe_name_id"),
-//				inverseJoinColumn()
+		factory = Persistence.createEntityManagerFactory("Student");
+		manager = factory.createEntityManager();
+		transaction = manager.getTransaction();
+	}
+	
+	private static void closeConnection() {
+		if(factory!=null) {
+			factory.close();
+		}
+		if(manager!=null) {
+			manager.close();
+		}
+		try {
+			transaction.rollback();
+		} catch (TransactionException e) {
+			System.out.println("transaction committed..");
+		}
 	}
 	public static void main(String[] args) {
-		retrieve();
+		try {
+			openConnection();
+			transaction.begin();
+			
+			
+			//user class name not user_define table name
+			//query = "from student";	op-exception
+			
+			query = "from StudentDTO";
+			Query createQuery = manager.createQuery(query);
+			List students = createQuery.getResultList();
+			
+			for(int i=0;i<students.size();i++) {
+				System.out.println(students.get(i));
+			}
+			
+//			List<StudentDTO>students = createQuery.getResultList();
+//			for(StudentDTO st:students) {
+//				System.out.println(st.getEmail());
+//			}
+			
+		
+			transaction.commit();
+			
+		} finally {
+			closeConnection();
+		}
 	}
 }

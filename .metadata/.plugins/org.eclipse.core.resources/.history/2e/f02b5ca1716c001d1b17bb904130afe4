@@ -1,5 +1,0 @@
-package com.jspider.hibernateonetoone.dto;
-
-public class HusbandDTO {
-
-}

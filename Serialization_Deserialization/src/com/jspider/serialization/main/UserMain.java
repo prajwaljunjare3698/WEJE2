@@ -17,7 +17,7 @@ public class UserMain {
 		objectStream.flush();
 		objectStream.close();
 		System.out.println("data send successfully");
-		
+		 
 		FileInputStream finput = new FileInputStream("C:\\Users\\kisho\\eclipse-workspace\\Serialization_Deserialization\\demo.txt");
 		ObjectInputStream objectIn = new ObjectInputStream(finput);
 		User readObject = (User)objectIn.readObject();
