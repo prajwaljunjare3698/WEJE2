@@ -14,9 +14,14 @@ public class RetriveData {
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/weje2?user=root&password=tiger");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/student?user=root&password=tiger");
 			statement = connection.createStatement();
-			resultset = statement.executeQuery("select * from student");
+			String s = "\\G";
+			String s1 = s.charAt(0)+""+s.charAt(1);
+			System.out.println(s1);
+			resultset = statement.executeQuery("select * from qspider "+s1+";");
+			
+			//not getting output.....
 			
 			int row = 0;
 			while(resultset.next()) {
@@ -28,7 +33,6 @@ public class RetriveData {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		finally {
