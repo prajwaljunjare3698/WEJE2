@@ -1,5 +1,6 @@
+REFRESH_WORKSPACE_ON_STARTUP=true
 SWITCH_PERSPECTIVE_ON_PROJECT_CREATION=never
 eclipse.preferences.version=1
-platformState=1669534399030
+platformState=1669534399597
 quickStart=false
 tipsAndTricks=true

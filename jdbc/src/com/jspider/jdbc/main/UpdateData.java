@@ -16,10 +16,8 @@ public class UpdateData {
 			System.out.println(rs+" rows affected");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-		} catch (SQLException e) {
-			
+		} catch (SQLException e) {			
 			e.printStackTrace();
-		}
-		
+		}		
 	}
 }

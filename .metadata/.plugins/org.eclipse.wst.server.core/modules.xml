@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <modules>
+  <module moduleId="org.eclipse.jst.jee.server:jsp"/>
   <module moduleId="org.eclipse.jst.jee.server:MediaPlayer" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:springmvc1" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.j2ee.server:springmvc2" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:jsp_studentapp_final" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Java_8" serverId="Tomcat v9.0 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:servlet_studentregistration" serverId="Tomcat v9.0 Server at localhost_1670571455930"/>
+  <module moduleId="org.eclipse.jst.jee.server:servlet_demo" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:ztest" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:servletNetflixproject" serverId="Tomcat v9.0 Server at localhost_1670571455930"/>
+  <module moduleId="org.eclipse.jst.jee.server:servlet_studentApp" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:jsp_studentapp_final2" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:student_detail" serverId="Tomcat v9.0 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:servlet1" serverId="Tomcat v9.0 Server at localhost_1670571455930"/>
+  <module moduleId="org.eclipse.jst.jee.server:jsp_jdbc" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:WebProject2" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:J2EE" serverId="Tomcat v9.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:servlet_studentdata" serverId="Tomcat v9.0 Server at localhost_1670571455930"/>
+  <module moduleId="org.eclipse.jst.jee.server:springmvc" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:springmvc2" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:servlet_studentregistration" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:springmvc1" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:jsp_musicplayer" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:servlet1" serverId="Tomcat v9.0 Server at localhost_1670571455930"/>
+  <module moduleId="org.eclipse.jst.jee.server:jsp_studentApp" serverId="Tomcat v9.0 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:servlet_old" serverId="Tomcat v9.0 Server at localhost"/>
 </modules>

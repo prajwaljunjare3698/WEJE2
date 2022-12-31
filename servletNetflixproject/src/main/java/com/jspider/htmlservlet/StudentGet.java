@@ -14,7 +14,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/stdregget")
 public class StudentGet extends HttpServlet {
+	
 	private static final long serialVersionUID = 1L;
+	
     public StudentGet() {
         super();
     }

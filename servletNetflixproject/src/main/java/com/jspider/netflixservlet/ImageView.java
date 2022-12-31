@@ -23,9 +23,10 @@ public class ImageView extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		
 		writer.println("<html>");
+		writer.println("<style>img{background-image:url(\"./netflix.jpg\");width:100%; height:100vh;}</style>");
 	    writer.println("<body>");
-	     
-	    writer.println("");
+	        
+	    writer.println("<img>");
 	    
 	    writer.println("</body>");
 	    writer.println("</html>");

@@ -2,9 +2,11 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\kisho\eclipse-workspace"/>
+			<item value="C:\Users\kisho\eclipse-workspace\jsp_studentapp_final\src\main\webapp\homepage_start.jsp"/>
+			<item value="C:\Users\kisho\eclipse-workspace\jsp_studentApp\src\main\webapp\logout.jsp"/>
 			<item value="C:\Users\kisho\eclipse-workspace\onetooneBidrectional\src\main\java\com\jspider\hibernate\onetooneBidirectional\dao\QuestionAnswerDAO.java"/>
 			<item value="C:\Users\kisho\eclipse-workspace\hibernatemanytoone\src\main\java\com\jspider\hibernatemanytoone\dao\CompanyEmplyoeeDAO.java"/>
-			<item value="C:\Users\kisho\eclipse-workspace"/>
 			<item value="C:\Users\kisho\eclipse-workspace\designpattern"/>
 			<item value="C:\Users\kisho\eclipse-workspace\hibernate1"/>
 			<item value="C:\Users\kisho\eclipse-workspace\Test\src\First\Test.java"/>
@@ -32,13 +34,17 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.jspider.hibernatemaping_task"/>
+			<item value="com.jspider.springmvc3"/>
+			<item value="com.jspider.springmvc2"/>
+			<item value="com.jspider.springmvc1"/>
 		</list>
 		<list key="groupId">
 			<item value="com.jspider"/>
 		</list>
 		<list key="artifactId">
-			<item value="hibernatemaping_task"/>
+			<item value="springmvc3"/>
+			<item value="springmvc2"/>
+			<item value="springmvc1"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

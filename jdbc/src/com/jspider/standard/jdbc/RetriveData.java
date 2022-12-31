@@ -12,16 +12,23 @@ public class RetriveData {
 	private static ResultSet resultset;
 	
 	public static void main(String[] args) {
+		
+		System.out.println("\""+"prajwal"+"\"");
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/student?user=root&password=tiger");
 			statement = connection.createStatement();
-			String s = "\\G";
-			String s1 = s.charAt(0)+""+s.charAt(1);
-			System.out.println(s1);
-			resultset = statement.executeQuery("select * from qspider "+s1+";");
 			
-			//not getting output.....
+//			String s = "\\G";
+//			String s1 = s.charAt(0)+""+s.charAt(1);
+//			System.out.println(s1);
+//			resultset = statement.executeQuery("select * from qspider "+s1+";");
+//			
+//			not getting output.....
+			
+			resultset = statement.executeQuery("select * from qspider where sid = 1");
+			resultset.next();
+			System.out.println(resultset.getString(1)+" "+resultset.getString(2)+" "+resultset.getString(3)+" "+resultset.getString(4)+" "+resultset.getString(5)+" "+resultset.getString(6)+" "+resultset.getString(7));
 			
 			int row = 0;
 			while(resultset.next()) {

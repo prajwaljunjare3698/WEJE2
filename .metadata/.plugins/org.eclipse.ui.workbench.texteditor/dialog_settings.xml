@@ -5,17 +5,31 @@
 		<item key="DIALOG_Y_ORIGIN" value="236"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="song"/>
+		<item key="selection" value="arr"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="a"/>
+			<item value="getInt"/>
+			<item value="student"/>
+			<item value="resultSet"/>
+			<item value="song"/>
+			<item value="name"/>
+			<item value="preparedStatement"/>
 			<item value="music"/>
 			<item value="public"/>
 		</list>
 		<list key="replacehistory">
+			<item value="arr"/>
+			<item value="getString"/>
+			<item value="Employee"/>
+			<item value="resultSet1"/>
+			<item value="student"/>
+			<item value="value"/>
+			<item value="preparedStatement1"/>
 			<item value="song"/>
 			<item value="protected"/>
 		</list>

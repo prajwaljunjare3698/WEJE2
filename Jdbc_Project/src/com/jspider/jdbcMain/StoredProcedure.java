@@ -31,7 +31,6 @@ public class StoredProcedure {
 				System.out.println(resultSet.getString(1)+" "+resultSet.getString(2)+" "+resultSet.getString(3));
 			}
 			
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

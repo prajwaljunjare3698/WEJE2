@@ -10,12 +10,22 @@ public class UpdateData {
 	private static Statement statement;
 	private static int result;
 	
+	private static String name = "rushi";
+	private static String email = "rushi123@gmail.com";
+	private static String course = "java";
+	private static String place = "jalgao";
+	
+	
 	public static void main(String[] args) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/weje2?user=root&password=tiger");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/jsp?user=root&password=tiger");
 			statement = connection.createStatement();
-			result = statement.executeUpdate("update student set sname='sachin' where sid=4");
+			//result = statement.executeUpdate("update studentdetail set name="+"\""+name+"\""+","+"email="+"\""+email+"\""+","+"course="+"\""+course+"\""+","+"place="+"\""+place+"\""+" where id=14");
+			
+			
+			//result = statement.executeUpdate("update studentdetail set name='+""+name+""+' where id=14");
+			 
 			
 			System.out.println(result+" rows affected...");
 			
