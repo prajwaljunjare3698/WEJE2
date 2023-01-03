@@ -18,10 +18,13 @@ public class StudentMain {
 		
 //		second way to create bean
 		StudentBean studentBean1 = (StudentBean)context.getBean("student1");
+
+		//		System.out.println(context.containsBean("student1"));	//true
+	
 		System.out.println(studentBean1);
 		
-		StudentBean studentBean2 = (StudentBean)context.getBean("student2");
-		System.out.println(studentBean2);
+//		StudentBean studentBean2 = (StudentBean)context.getBean("student2");
+//		System.out.println(studentBean2);
 		
 		
 		((ClassPathXmlApplicationContext)context).close();

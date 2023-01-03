@@ -21,12 +21,13 @@ public class First {
 			first = second;
 			second = third;
 			third = first + second;			
-	}
+		}
 		if(sum%2==0) {
 			System.out.println(sum+" is even");
 		}
 		else {
 			System.out.println(sum+" is odd");
 		}
+		sc.close();
 	}
 }

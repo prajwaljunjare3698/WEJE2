@@ -4,6 +4,7 @@
   
 <%StudentPojo student = (StudentPojo) request.getAttribute("student");%>
 <%String msg = (String) request.getAttribute("msg");%>
+<%String verify = (String) request.getAttribute("verify"); %>
 
 <!DOCTYPE html>
 <html>
@@ -25,7 +26,7 @@
 		border: 1px solid;
 		margin:auto;
 		margin-top: 60px;
-        box-shadow: 13px 14px 19px 0px;
+        box-shadow: 11px 11px 12px 0px;
 		padding: 12px;
 		font-size: 25px;
 		border-radius: 18px;
@@ -83,8 +84,8 @@
 	h5{
 		font-size: 18px;
 		color: red;
-		margin-left: 90px;
-		margin-top: 60px;
+		margin-left: 28px;
+		margin-top: 4px;
 	}
  	h2{
 		font-family: serif;
@@ -97,6 +98,12 @@
 </head>
 <body>
 			
+	<%if(verify != null) {%>
+		<h2 style="font-family: serif;font-size: 30px; text-align: center;color: #cb1313;margin-top: 71px;margin-bottom: -38px;"><%= verify %></h2> 
+		
+		   
+		
+	<%} %> 
 
 <div id="content">
 	<form action="./login" method="post">

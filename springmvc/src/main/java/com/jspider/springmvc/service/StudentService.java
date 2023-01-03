@@ -32,11 +32,6 @@ public class StudentService {
 		return pojo;
 	} 
  
-	public StudentPojo update(int id) {
-		StudentPojo pojo = repository.update(id);
-		
-		return pojo; 
-	}
 
 	public List<StudentPojo> showAll() {
 		List<StudentPojo> pojos = repository.showAll();
@@ -47,6 +42,11 @@ public class StudentService {
 		StudentPojo pojo = repository.remove(id);
 		return pojo;
 	}
+
+	public void update(int id, String name, String email, long contact, String city, String username, String password) {
+		repository.update(id,name,email,contact,city,username,password);
+	}
+
 
 }
  

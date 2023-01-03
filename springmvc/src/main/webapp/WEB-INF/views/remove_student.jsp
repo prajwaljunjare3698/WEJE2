@@ -45,26 +45,21 @@
 	<form action="./remove" method="post">
 		<label>Enter id</label>
 		<input type="text" name="id" autofocus required="required">	
-		<input type="submit" value="submit">	
+		<input type="submit" value="remove">	
 	</form>
 	
-	<%
-	if (msg != null) {
-	%>
-	<h3 align="center"><%=msg%></h3>
-	<%
-	}
-	%>
-	<%
-	if (students != null) {
-	%>
+	<%if (msg != null) {%>
+		<h3 align="center"><%=msg%></h3>
+	<%}	%>
+	
+	<%if (students != null) {%>
 		<h2>Student Details</h2>
 		<table id="data">
 			<thead>
 				<tr>
 					<td><b>Id</b></td><td><b>Name</b></td><td><b>Email</b></td><td><b>Contact</b></td><td><b>City</b></td><td><b>UserName</b></td><td><b>Password</b></td>
 				</tr>
-			</thead>
+			</thead>					
 					
 			<tbody>
 				<%for (StudentPojo student : students) {%>
@@ -81,9 +76,7 @@
 			</tbody>
 			
 		</table>
-	<%
-	}
-	%>
+	<%}%>
 	
 </body>
 </html>

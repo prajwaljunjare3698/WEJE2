@@ -8,4 +8,11 @@ public class StudentBean {
 	String name;
 	String email;
 	long contact;	
+	
+//	public void init() {
+//		System.out.println("this is init");
+//	}
+//	public void destroy() {
+//		System.out.println("this is destroy");
+//	}
 }

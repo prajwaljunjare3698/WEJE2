@@ -11,7 +11,7 @@
 </head>
 <body>
 	
-	<%response.sendRedirect("login_form.jsp"); %>
+	<jsp:forward page="login_form.jsp"></jsp:forward>
 
 </body>
-</html>
+</html> 

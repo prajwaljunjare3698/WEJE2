@@ -6,6 +6,7 @@
 
 <%StudentPojo student = (StudentPojo) request.getAttribute("student");%>
 <%String msg = (String) request.getAttribute("msg");%>
+<%String verify = (String) request.getAttribute("verify"); %>
 
 <!DOCTYPE html>
 <html>

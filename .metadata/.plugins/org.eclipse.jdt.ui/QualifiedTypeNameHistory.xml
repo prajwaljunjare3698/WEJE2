@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
-    <fullyQualifiedTypeName name="com.jspider.h_manytomanyBidirectional.dto.UserDTO"/>
-    <fullyQualifiedTypeName name="com.jspider.h_manytomanyBidirectional.dto.MobileDTO"/>
-    <fullyQualifiedTypeName name="com.jspider.MusicaPlayer_hibernate.dto.TempDTO"/>
-    <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
     <fullyQualifiedTypeName name="File_Handling.FileinoutStream"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
@@ -20,13 +15,11 @@
     <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="org.hibernate.annotations.Entity"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.Student.StudentBean"/>
-    <fullyQualifiedTypeName name="com.jspider.springcorexml.bean.StudentBean"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.bean.HusbandBean"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.bean.FatherBean"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.bean.ChildBean"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.manytoone.bean.CandidateBean"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.manytoone.bean.VoterBean"/>
-    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.manytomany.bean.CustomerBean"/>
     <fullyQualifiedTypeName name="com.jspider.springcorexml.manytomany.bean.ProductBean"/>
     <fullyQualifiedTypeName name="com.jspiders.springannotation.config.StudentConfig"/>
@@ -60,4 +53,11 @@
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="javax.persistence.Query"/>
     <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.AbstractApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+    <fullyQualifiedTypeName name="com.jspider.springcorexml.bean.StudentBean"/>
+    <fullyQualifiedTypeName name="com.durgesh.spring.StudentBean"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.ModelMap"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

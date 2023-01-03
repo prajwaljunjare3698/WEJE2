@@ -1,7 +1,5 @@
 package com.jspider.springmvc.repository;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -35,7 +33,7 @@ public class StudentRepository {
 	
 	private static void closeConnection() {
 		if (factory != null) {
-			factory.close();
+			factory.close();	
 		}
 		if (manager != null) {
 			manager.close();
@@ -94,14 +92,23 @@ public class StudentRepository {
 		return pojo;
 	}
 
-	public StudentPojo update(int id) {
+	public void update(int id, String name, String email, long contact, String city, String username, String password) {
 		openConnection();
 		transaction.begin();
 		
 		StudentPojo pojo = manager.find(StudentPojo.class, id);
+		pojo.setName(name);
+		pojo.setEmail(email);
+		pojo.setContact(contact);
+		pojo.setCity(city);
+		pojo.setUsername(username);
+		pojo.setPassword(password);
 		
+		manager.persist(pojo);
+		transaction.commit();
 		
-		return pojo;
+		closeConnection();
+		
 	}
 
 
@@ -111,6 +118,9 @@ public class StudentRepository {
 		StudentPojo pojo = manager.find(StudentPojo.class, id);
 		if (pojo != null) {
 			manager.remove(pojo);
+		}
+		else {
+			return null;
 		}
 		transaction.commit();
 		closeConnection();
